@@ -1,0 +1,10 @@
+Set QTP = CreateObject("QuickTest.Application")
+QTP.Launch
+QTP.Visible = TRUE
+QTP.Open "C:\Users\NHIDCL\Desktop\GUITest1", TRUE
+QTP.Test.Run
+While QTP.Test.isRunning
+WScript.Sleep 1000
+Wend
+QTP.Test.Close
+QTP.Quit
